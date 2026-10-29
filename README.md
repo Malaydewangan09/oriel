@@ -64,7 +64,7 @@ Your data is in `~/Library/Application Support/Desk/desk.sqlite`. Delete that fo
 
 ## Install
 
-Requires macOS 14 or later. Download `Oriel.dmg` from [Releases](https://github.com/Malaydewangan09/oriel/releases), or install from the terminal, which also skips the right-click step below:
+Requires macOS 14 or later. Download `Oriel.dmg` from [Releases](https://github.com/Malaydewangan09/oriel/releases), or install from the terminal, which also skips the Gatekeeper step below:
 
 ```sh
 curl -fsSL https://oriel-site-one.vercel.app/install | sh
@@ -80,7 +80,7 @@ cp -R dist/Oriel.app /Applications/
 open /Applications/Oriel.app
 ```
 
-The bundle is ad-hoc signed, not notarized. On first launch, right-click the app and choose Open. macOS asks for permissions again after each rebuild.
+The bundle is ad-hoc signed, not notarized, so macOS blocks the first launch of a downloaded copy. Open System Settings > Privacy & Security, click Open Anyway next to Oriel, and confirm. On macOS 14 you can also right-click the app and choose Open. macOS asks for permissions again after each rebuild.
 
 ## Hand to Claude
 
