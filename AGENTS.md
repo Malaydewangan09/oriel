@@ -4,7 +4,6 @@ Oriel is a native macOS notch app. It keeps what you copy, screenshot and downlo
 
 ## Read first
 
-- Act as a senior engineer. Favour the simple solution, question anything that adds debt, and challenge only when it matters.
 - **KISS.** No abstraction until a second caller exists. No protocols with one conformer, no managers of managers.
 - **DRY.** Find the closest existing pattern and follow it. A second way to do the same thing will not be merged.
 - **Surgical changes.** Touch only what the goal needs. Do not reformat or rename code you did not otherwise change.
