@@ -19,6 +19,8 @@ Hover the notch (or press ⌃⌥Space) and the shelf opens. Everything stays on 
 
 ![The shelf, open under the notch](docs/images/shelf.jpg)
 
+[Watch the 25-second demo](docs/oriel.mp4)
+
 ## What it does
 
 - Copied text and links, new screenshots and new downloads land on the shelf. Text inside screenshots and PDFs is read on the Mac with Vision and PDFKit, so it is searchable.
