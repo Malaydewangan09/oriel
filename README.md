@@ -1,6 +1,19 @@
-# Oriel
+<p align="center">
+  <img src="docs/images/icon.png" width="128" height="128" alt="Oriel icon">
+</p>
 
-A small macOS notch app that keeps what you copy, screenshot and download, grouped by the task it belongs to.
+<h1 align="center">Oriel</h1>
+
+<p align="center">
+  A small macOS notch app that keeps what you copy, screenshot and download, grouped by the task it belongs to.
+</p>
+
+<p align="center">
+  <a href="https://github.com/Malaydewangan09/oriel/releases/latest"><img src="https://img.shields.io/github/v/release/Malaydewangan09/oriel?label=download" alt="Latest release"></a>
+  <a href="https://github.com/Malaydewangan09/oriel/actions/workflows/ci.yml"><img src="https://github.com/Malaydewangan09/oriel/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <img src="https://img.shields.io/badge/macOS-14%2B-black" alt="macOS 14 or later">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT license"></a>
+</p>
 
 Hover the notch (or press ⌃⌥Space) and the shelf opens. Everything stays on your Mac in one SQLite file. Native SwiftUI, no dependencies, ~8 MB universal binary.
 
