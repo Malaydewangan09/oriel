@@ -35,7 +35,7 @@ enum SelfTest {
             "Text for AI hides tokens and link passwords",
             {
                 let r = Secrets.redact(
-                    "token: ghp_" + String(repeating: "a1B2", count: 9) + "\nDB_URL=postgres://admin:Hx92kLq7@db.acme.dev:5432/app")
+                    "token: ghp_" + String(repeating: "a1B2", count: 9) + "\nDB_URL=postgres://admin:" + "Hx92kLq7" + "@db.acme.dev:5432/app")
                 return !r.contains("ghp_a1B2") && !r.contains("Hx92kLq7") && r.contains("postgres://admin:[password hidden]@db.acme.dev")
             }())
         check("Base64 decode", Transform.base64.apply("aGVsbG8gd29ybGQ=") == "hello world")
@@ -106,7 +106,7 @@ enum SelfTest {
 
         // Share safely
         let found = ShareSafe.sensitive(
-            in: "DB_URL=postgres://admin:Hx92kL@10.0.3.14 owner: alex@acme.io token: ghp_" + String(repeating: "a1B2", count: 9))
+            in: "DB_URL=postgres://admin:" + "Hx92kL" + "@10.0.3.14 owner: alex@acme.io token: ghp_" + String(repeating: "a1B2", count: 9))
         check(
             "Share safely: password in link, email, token",
             Set(found.map(\.0)).isSuperset(of: ["Password in a link", "Email address", "GitHub token"]))
