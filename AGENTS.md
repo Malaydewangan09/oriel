@@ -92,7 +92,7 @@ Add a self-test check when you add behaviour or fix a bug, and the check would h
 
 ## Writing
 
-Plain and factual, in UI text, comments, commits and docs. Say what it does. No hype words, no exclamation marks, no em dashes. Commit messages are one short line saying what changed and why. Never add an AI tool as author or co-author.
+Plain and factual, in UI text, comments, commits and docs. Say what it does. No hype words, no exclamation marks, no em dashes. Commit messages follow [Conventional Commits](https://www.conventionalcommits.org): `type(scope): summary`, with type one of `feat`, `fix`, `perf`, `refactor`, `docs`, `test`, `ci` or `chore`. One short line saying what changed and why. Never add an AI tool as author or co-author.
 
 ## Keeping this file current
 

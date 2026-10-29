@@ -16,7 +16,7 @@ Bug reports and small pull requests are welcome. For anything bigger, open an is
 
 ## Pull request
 
-- Title: one short line saying what changed.
+- Title and commits: [Conventional Commits](https://www.conventionalcommits.org), like `fix(capture): skip partial downloads`.
 - Body: why, and how you checked it. A screenshot or short recording for anything visible.
 - Add a self-test check if you fixed a bug in pure logic (a detector, parser or transform) and the check would have failed before.
 
