@@ -1,9 +1,9 @@
-# dmgbuild settings for Oriel.dmg: night lake background, Oriel on the left, Applications on the right.
+# dmgbuild settings for Sill.dmg: night lake background, Sill on the left, Applications on the right.
 import os.path
-app = defines.get("app", "dist/Oriel.app")  # noqa: F821 (dmgbuild injects `defines`)
+app = defines.get("app", "dist/Sill.app")  # noqa: F821 (dmgbuild injects `defines`)
 files = [app]
 symlinks = {"Applications": "/Applications"}
-icon = "brand/Oriel.icns"
+icon = "brand/Sill.icns"
 background = "brand/dmg-background.tiff"
 window_rect = ((200, 160), (660, 420))
 icon_size = 96

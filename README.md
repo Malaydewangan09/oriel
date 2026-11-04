@@ -1,27 +1,27 @@
 <p align="center">
-  <img src="docs/images/icon.png" width="128" height="128" alt="Oriel icon">
+  <img src="docs/images/icon.png" width="128" height="128" alt="Sill icon">
 </p>
 
-<h1 align="center">Oriel</h1>
+<h1 align="center">Sill</h1>
 
 <p align="center">
   Everything you copy, in your notch.
 </p>
 
 <p align="center">
-  <a href="https://github.com/Malaydewangan09/oriel/releases/latest"><img src="https://img.shields.io/github/v/release/Malaydewangan09/oriel?label=download" alt="Latest release"></a>
-  <a href="https://github.com/Malaydewangan09/oriel/actions/workflows/ci.yml"><img src="https://github.com/Malaydewangan09/oriel/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/Malaydewangan09/sill/releases/latest"><img src="https://img.shields.io/github/v/release/Malaydewangan09/sill?label=download" alt="Latest release"></a>
+  <a href="https://github.com/Malaydewangan09/sill/actions/workflows/ci.yml"><img src="https://github.com/Malaydewangan09/sill/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <img src="https://img.shields.io/badge/macOS-14%2B-black" alt="macOS 14 or later">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT license"></a>
 </p>
 
-<p align="center"><a href="https://malaydewangan09.github.io/oriel/">malaydewangan09.github.io/oriel</a></p>
+<p align="center"><a href="https://malaydewangan09.github.io/sill/">malaydewangan09.github.io/sill</a></p>
 
 Hover the notch (or press ⌃⌥Space) and the shelf opens. Everything stays on your Mac in one SQLite file. Native SwiftUI, no dependencies, ~8 MB universal binary.
 
 ![The shelf, open under the notch](docs/images/shelf.jpg)
 
-[Watch the 25-second demo](docs/oriel.mp4)
+[Watch the 25-second demo](docs/sill.mp4)
 
 ## What it does
 
@@ -47,11 +47,11 @@ Hover the notch (or press ⌃⌥Space) and the shelf opens. Everything stays on 
 | ⌃⌥T | Grab text: drag over anything on screen and its text goes on the clipboard. |
 | ⌘Y | Quick Look the selected item. |
 | ⌘Return | Open Share safely or the actions found in the selected item. |
-| ⌘Delete | Delete the selected item from Oriel. The file it points to stays where it is. |
+| ⌘Delete | Delete the selected item from Sill. The file it points to stays where it is. |
 
 ## Privacy
 
-Oriel only keeps what you hand it. It does not read other apps' windows, browser tabs or screen content, and does not track which app you use. There is no network code. The only thing that leaves the Mac is a stack you hand to your own Claude Code.
+Sill only keeps what you hand it. It does not read other apps' windows, browser tabs or screen content, and does not track which app you use. There is no network code. The only thing that leaves the Mac is a stack you hand to your own Claude Code.
 
 Permissions:
 
@@ -64,35 +64,35 @@ Your data is in `~/Library/Application Support/Desk/desk.sqlite`. Delete that fo
 
 ## Install
 
-Requires macOS 14 or later. Download `Oriel.dmg` from [Releases](https://github.com/Malaydewangan09/oriel/releases), or install from the terminal, which also skips the Gatekeeper step below:
+Requires macOS 14 or later. Download `Sill.dmg` from [Releases](https://github.com/Malaydewangan09/sill/releases), or install from the terminal, which also skips the Gatekeeper step below:
 
 ```sh
-curl -fsSL https://malaydewangan09.github.io/oriel/install | sh
+curl -fsSL https://malaydewangan09.github.io/sill/install | sh
 ```
 
 To build it yourself you need the Swift 6 toolchain (Xcode 16 or its Command Line Tools).
 
 ```sh
-git clone https://github.com/Malaydewangan09/oriel.git
-cd oriel
+git clone https://github.com/Malaydewangan09/sill.git
+cd sill
 ./scripts/bundle.sh
-cp -R dist/Oriel.app /Applications/
-open /Applications/Oriel.app
+cp -R dist/Sill.app /Applications/
+open /Applications/Sill.app
 ```
 
-The bundle is ad-hoc signed, not notarized, so macOS blocks the first launch of a downloaded copy. Open System Settings > Privacy & Security, click Open Anyway next to Oriel, and confirm. On macOS 14 you can also right-click the app and choose Open. macOS asks for permissions again after each rebuild.
+The bundle is ad-hoc signed, not notarized, so macOS blocks the first launch of a downloaded copy. Open System Settings > Privacy & Security, click Open Anyway next to Sill, and confirm. On macOS 14 you can also right-click the app and choose Open. macOS asks for permissions again after each rebuild.
 
 ## Hand to Claude
 
 ![A Claude Code session started from a stack](docs/images/hand-to-claude.jpg)
 
-Pick a stack and choose *Hand to Claude*. Oriel asks once which folder the repo lives in, then runs `claude --bg --permission-mode plan` there with the stack as the prompt. Claude reads and proposes. Nothing changes until you attach and approve. Requires `claude` on your `PATH`.
+Pick a stack and choose *Hand to Claude*. Sill asks once which folder the repo lives in, then runs `claude --bg --permission-mode plan` there with the stack as the prompt. Claude reads and proposes. Nothing changes until you attach and approve. Requires `claude` on your `PATH`.
 
 ## Development
 
 ```sh
 swift build
-.build/debug/Oriel --selftest
+.build/debug/Sill --selftest
 ```
 
 [docs/architecture.md](docs/architecture.md) explains how the parts fit. [AGENTS.md](AGENTS.md) has the code rules and privacy rules, for people and coding agents alike. [CONTRIBUTING.md](CONTRIBUTING.md) covers pull requests.

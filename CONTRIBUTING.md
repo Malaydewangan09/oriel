@@ -8,7 +8,7 @@ Bug reports and small pull requests are welcome. For anything bigger, open an is
 2. Build and test:
    ```sh
    swift build
-   .build/debug/Oriel --selftest
+   .build/debug/Sill --selftest
    swift format format --in-place --recursive --configuration .swift-format Sources
    ```
 3. Bundle the app with `./scripts/bundle.sh`, open it, and use the feature you changed.

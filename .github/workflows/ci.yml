@@ -13,6 +13,6 @@ jobs:
       - name: Build
         run: swift build -Xswiftc -warnings-as-errors
       - name: Self-test
-        run: .build/debug/Oriel --selftest
+        run: .build/debug/Sill --selftest
       - name: Format check
         run: swift format lint --strict --recursive --configuration .swift-format Sources

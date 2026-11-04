@@ -1,17 +1,17 @@
-# How Oriel works
+# How Sill works
 
 One process, one SQLite file, no server. Three things put rows in the store, and the shelf reads them back.
 
 ```
 ClipboardWatcher --+
-FolderIndexer -----+--> Store (SQLite + FTS5) --> .orielCaught --> NotchShelf (peek)
+FolderIndexer -----+--> Store (SQLite + FTS5) --> .sillCaught --> NotchShelf (peek)
 Notch drops -------+          |
                               +--> ShelfModel.reload --> ShelfView / ClassicShelfView
 ```
 
 ## Capture
 
-- `Capture/ClipboardWatcher` checks `NSPasteboard.changeCount` every 0.25s on the main thread. A change with plain text is saved, unless the pasteboard carries a concealed or transient type, comes from an excluded app, or was written by Oriel itself (`markOwn`).
+- `Capture/ClipboardWatcher` checks `NSPasteboard.changeCount` every 0.25s on the main thread. A change with plain text is saved, unless the pasteboard carries a concealed or transient type, comes from an excluded app, or was written by Sill itself (`markOwn`).
 - `Capture/FolderIndexer` watches Downloads and the screenshot folder with a `DispatchSource`, and rescans every 15s as a fallback. Text in images and PDFs is read with Vision and PDFKit on a utility queue. Files older than 14 days are ignored.
 - `Notch/HoverView` takes files and text dropped on the notch. Dropped items are pinned.
 - `Capture/Secrets` decides whether copied text is a secret. Secrets are stored with an `expires` time, and their text is kept out of the FTS index.

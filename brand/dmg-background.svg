@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420">
-  <!-- Background of the Oriel disk image window. Icons sit at (170,180) and (490,180). Flat colours, no gradients. -->
+  <!-- Background of the Sill disk image window. Icons sit at (170,180) and (490,180). Flat colours, no gradients. -->
   <rect width="660" height="420" fill="#0d1330"/>
   <g fill="#fff">
     <circle cx="40" cy="40" r="1.2" opacity=".6"/><circle cx="120" cy="80" r="1" opacity=".4"/><circle cx="300" cy="36" r="1.2" opacity=".5"/>
@@ -17,7 +17,7 @@
     <path d="M264 189 C 304 172, 350 171, 396 185" stroke-width="1.2" opacity=".35"/>
     <path d="M384 168 L 400 183 L 381 194" stroke-width="2.6" opacity=".85"/>
   </g>
-  <text x="330" y="300" text-anchor="middle" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="13" fill="#fff" fill-opacity=".6">Drag Oriel into Applications</text>
+  <text x="330" y="300" text-anchor="middle" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="13" fill="#fff" fill-opacity=".6">Drag Sill into Applications</text>
   <!-- Finder draws icon labels in black, so each label sits on a moon-coloured pill. -->
   <rect x="135" y="235" width="70" height="21" rx="10.5" fill="#fbf0cf"/>
   <rect x="433" y="235" width="114" height="21" rx="10.5" fill="#fbf0cf"/>

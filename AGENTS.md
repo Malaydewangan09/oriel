@@ -1,6 +1,6 @@
-# Coding agent guidelines for Oriel
+# Coding agent guidelines for Sill
 
-Oriel is a native macOS notch app. It keeps what you copy, screenshot and download, groups it by task, and hands a task to Claude Code. Read this file before changing anything.
+Sill is a native macOS notch app. It keeps what you copy, screenshot and download, groups it by task, and hands a task to Claude Code. Read this file before changing anything.
 
 ## Read first
 
@@ -14,7 +14,7 @@ Oriel is a native macOS notch app. It keeps what you copy, screenshot and downlo
 
 These are product rules, not preferences. A change that breaks one will not be merged.
 
-- Oriel only acts on what the user hands it: copies, drops, screenshots and downloads. It never reads other apps' windows, window titles, browser tabs or screen content, and never records which app is in front.
+- Sill only acts on what the user hands it: copies, drops, screenshots and downloads. It never reads other apps' windows, window titles, browser tabs or screen content, and never records which app is in front.
 - Nothing leaves the Mac except a stack the user explicitly hands to Claude Code. That text goes through `Secrets.redact` first.
 - Secrets (`Secrets.kind`) are stored masked, never enter the full-text index, and expire after `Secrets.lifetime`.
 - No network code, analytics or crash reporting.
@@ -25,7 +25,7 @@ These are product rules, not preferences. A change that breaks one will not be m
 Swift Package, one executable target, macOS 14+, Swift 6 toolchain in Swift 5 language mode. No third-party dependencies.
 
 ```
-Sources/Oriel/
+Sources/Sill/
   App/       entry point, AppDelegate, preferences, global hotkeys, the self-test
   Store/     Item, Kind and Look, the SQLite store, natural-language Query
   Capture/   clipboard watcher, Downloads and screenshot indexer, Grab, Secrets, Transform
@@ -77,11 +77,11 @@ No silent failures on paths the user sees. If an action cannot complete, say so 
 
 ```sh
 swift build                         # debug build
-.build/debug/Oriel --selftest       # pure-logic checks, exits non-zero on failure
-./scripts/bundle.sh                 # universal dist/Oriel.app, ad-hoc signed
-./scripts/dmg.sh                    # dist/Oriel.dmg
-ORIEL_DEMO=1 open dist/Oriel.app    # demo mode: ignores files that existed before launch
-ORIEL_DB=/tmp/x.sqlite              # run against a throwaway database
+.build/debug/Sill --selftest       # pure-logic checks, exits non-zero on failure
+./scripts/bundle.sh                 # universal dist/Sill.app, ad-hoc signed
+./scripts/dmg.sh                    # dist/Sill.dmg
+SILL_DEMO=1 open dist/Sill.app    # demo mode: ignores files that existed before launch
+SILL_DB=/tmp/x.sqlite              # run against a throwaway database
 ```
 
 CI runs the same build with `-warnings-as-errors`, the self-test, and `swift format lint --strict`. A change is done when `swift build` shows no warnings, the self-test passes, and you have opened the bundled app and used the feature you touched.

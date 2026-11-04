@@ -2,8 +2,8 @@
 import PackageDescription
 
 let package = Package(
-    name: "Oriel",
+    name: "Sill",
     platforms: [.macOS(.v14)],
-    targets: [.executableTarget(name: "Oriel", linkerSettings: [.linkedLibrary("sqlite3")])],
+    targets: [.executableTarget(name: "Sill", linkerSettings: [.linkedLibrary("sqlite3")])],
     swiftLanguageModes: [.v5]
 )
