@@ -99,7 +99,7 @@ swift build
 
 ## Status
 
-Work in progress. Used daily by its author on a MacBook with a notch. Screens without a notch get a drawn one.
+Experiment, not actively developed. Built on a MacBook with a notch. Screens without a notch get a drawn one.
 
 ## License
 
