@@ -5,7 +5,7 @@
 <h1 align="center">Oriel</h1>
 
 <p align="center">
-  A small macOS notch app that keeps what you copy, screenshot and download, grouped by the task it belongs to.
+  Everything you copy, in your notch.
 </p>
 
 <p align="center">
