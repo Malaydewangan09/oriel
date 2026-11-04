@@ -1,32 +1,32 @@
 #!/bin/sh
-# Installs the latest Oriel release from GitHub into /Applications.
+# Installs the latest Sill release from GitHub into /Applications.
 set -eu
 
 major=$(sw_vers -productVersion | cut -d. -f1)
 if [ "$major" -lt 14 ]; then
-  echo "Oriel needs macOS 14 Sonoma or later. This Mac has $(sw_vers -productVersion)."
+  echo "Sill needs macOS 14 Sonoma or later. This Mac has $(sw_vers -productVersion)."
   exit 1
 fi
 
-apps="${ORIEL_APPS_DIR:-/Applications}"
+apps="${SILL_APPS_DIR:-/Applications}"
 tmp=$(mktemp -d)
 cleanup() { hdiutil detach -quiet "$tmp/mnt" 2>/dev/null || true; rm -rf "$tmp"; }
 trap cleanup EXIT
 
-echo "Downloading Oriel..."
-curl -fsSL "https://github.com/Malaydewangan09/oriel/releases/latest/download/Oriel.dmg" -o "$tmp/Oriel.dmg"
-hdiutil attach -quiet -nobrowse -readonly -mountpoint "$tmp/mnt" "$tmp/Oriel.dmg"
+echo "Downloading Sill..."
+curl -fsSL "https://github.com/Malaydewangan09/sill/releases/latest/download/Sill.dmg" -o "$tmp/Sill.dmg"
+hdiutil attach -quiet -nobrowse -readonly -mountpoint "$tmp/mnt" "$tmp/Sill.dmg"
 
-if pgrep -xq Oriel; then
-  echo "Closing the running Oriel..."
-  osascript -e 'quit app "Oriel"' >/dev/null 2>&1 || true
+if pgrep -xq Sill; then
+  echo "Closing the running Sill..."
+  osascript -e 'quit app "Sill"' >/dev/null 2>&1 || true
   sleep 1
 fi
 
 echo "Installing into $apps..."
-rm -rf "$apps/Oriel.app"
-ditto "$tmp/mnt/Oriel.app" "$apps/Oriel.app"
-xattr -dr com.apple.quarantine "$apps/Oriel.app" 2>/dev/null || true
+rm -rf "$apps/Sill.app"
+ditto "$tmp/mnt/Sill.app" "$apps/Sill.app"
+xattr -dr com.apple.quarantine "$apps/Sill.app" 2>/dev/null || true
 
-if [ -z "${ORIEL_NO_OPEN:-}" ]; then open "$apps/Oriel.app"; fi
-echo "Done. Oriel is in $apps. Hover your notch, or press Control-Option-Space."
+if [ -z "${SILL_NO_OPEN:-}" ]; then open "$apps/Sill.app"; fi
+echo "Done. Sill is in $apps. Hover your notch, or press Control-Option-Space."
