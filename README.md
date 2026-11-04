@@ -21,7 +21,7 @@ Hover the notch (or press ⌃⌥Space) and the shelf opens. Everything stays on 
 
 ![The shelf, open under the notch](docs/images/shelf.jpg)
 
-[Watch the 25-second demo](docs/sill.mp4)
+[Watch the 20-second demo](docs/sill.mp4)
 
 ## What it does
 
