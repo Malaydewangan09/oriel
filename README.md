@@ -15,7 +15,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT license"></a>
 </p>
 
-<p align="center"><a href="https://oriel-site-one.vercel.app">oriel-site-one.vercel.app</a></p>
+<p align="center"><a href="https://malaydewangan09.github.io/oriel/">malaydewangan09.github.io/oriel</a></p>
 
 Hover the notch (or press ⌃⌥Space) and the shelf opens. Everything stays on your Mac in one SQLite file. Native SwiftUI, no dependencies, ~8 MB universal binary.
 
@@ -67,7 +67,7 @@ Your data is in `~/Library/Application Support/Desk/desk.sqlite`. Delete that fo
 Requires macOS 14 or later. Download `Oriel.dmg` from [Releases](https://github.com/Malaydewangan09/oriel/releases), or install from the terminal, which also skips the Gatekeeper step below:
 
 ```sh
-curl -fsSL https://oriel-site-one.vercel.app/install | sh
+curl -fsSL https://malaydewangan09.github.io/oriel/install | sh
 ```
 
 To build it yourself you need the Swift 6 toolchain (Xcode 16 or its Command Line Tools).
